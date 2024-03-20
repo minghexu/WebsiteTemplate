@@ -1,0 +1,166 @@
+.zhe {
+  padding: 0 .15rem;
+  margin-top: .3rem;
+}
+.image-list .cover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.bei {background-color: #eef7ec;display: flex;border:7px solid #fff;height: 100%;justify-content: center;align-items: center;}
+.borbei {height: 4.44rem;border:7px solid #88bc40;}
+.image-list .cover img {
+  width: 100%;
+}
+#pictureViewer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 10000
+}
+#pictureViewer > .content {
+  background-color: #fff;
+  position: absolute;
+  width: auto!important;
+  height: auto!important;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0
+}
+#pictureViewer .menu-bar {
+  width: 100%
+}
+#pictureViewer .menu-bar .handel {
+  width: 40px;
+  height: 40px;
+  float: right;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer
+}
+#pictureViewer .menu-bar .handel:hover {
+  background-color: #88bc40;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s
+}
+#pictureViewer .menu-bar .handel.maximization {
+  background-image: url(../images/maximization_black.png);
+  background-size: 14px;
+display:none!important;
+}
+#pictureViewer .menu-bar .handel.maximization:hover {
+  background-image: url(../images/maximization_white.png)
+}
+#pictureViewer .menu-bar .handel.miniaturization {
+  background-size: 16px;
+  background-image: url(../images/miniaturization_black.png)
+}
+#pictureViewer .menu-bar .handel.miniaturization:hover {
+  background-image: url(../images/miniaturization_white.png)
+}
+#pictureViewer .menu-bar .handel.close-view {
+  background-image: url(../images/close_black.png);
+  background-size: 15px
+}
+#pictureViewer .menu-bar .handel.close-view:hover {
+  background-image: url(../images/close_white.png)
+}
+#pictureViewer .handel-prev, #pictureViewer .handel-next {
+  display: inline-block;
+  width: 50px;
+  height: 70px;
+  position: relative;
+  top: calc(50% - 80px);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 50%;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s
+}
+#pictureViewer .handel-prev {
+  background-image: url(../images/prev_blank.png)
+}
+#pictureViewer .handel-next {
+  background-image: url(../images/next_blank.png)
+}
+#pictureViewer .handel-prev:hover, #pictureViewer .handel-next:hover {
+  background-color: #88bc40
+}
+#pictureViewer .handel-prev:hover {
+  background-image: url(../images/prev_white.png)
+}
+#pictureViewer .handel-next:hover {
+  background-image: url(../images/next_white.png)
+}
+#pictureViewer .picture-content {
+  display: inline-block;
+  width: 80%;
+  height: calc(100% - 80px);
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0
+}
+#pictureViewer .picture-content .cover {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	border: 7px solid #88bc40;
+	padding: 2%;
+}
+#pictureViewer .counter {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+  color: gray;
+  font-size: 13px
+}
+#pictureViewer .hide {
+  display: none
+}
+#pictureViewer .left {
+  float: left
+}
+#pictureViewer .right {
+  float: right
+}
+#pictureViewer .clear-flex {
+  clear: both
+}
+#pictureViewer img {
+  max-width: 100%;
+  max-height: 100%
+}
+@media (min-width: 992px) {  
+  .zhe {
+    padding: 0 .15rem;
+    margin-top: .3rem;
+  }
+  #pictureViewer > .content {
+    width: 590px;
+    height: 420px;
+  }
+	.borbei  {height: 2.97rem;}
+}
+@media (min-width: 1200px) { 
+.borbei  {height: 3.88rem;}
+}
+

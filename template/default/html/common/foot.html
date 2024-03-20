@@ -1,0 +1,72 @@
+<!-- 尾部 -->
+<div id="guanbi" style="position:fixed; bottom:0; right:0; z-index:99; width:330px">
+	<a onClick="this.parentNode.style.display='none'"  style="width:20px; height:20px; display: block; color:#333;  background: #fff;  border:0px solid #333; position: absolute; right:15px; top:60px; font-size:20px; line-height:18px; text-align: center;cursor: pointer;border-radius: 50%;">×</a>
+	<!-- 垃圾弹窗 -->
+  <!-- <a><img src="skin/picture/swch.png" width="320" height="240" style="margin-bottom:15px;" /></a> -->
+</div>
+<div class="container-fluid headfoot">
+  <div class="container p-0">
+    <div class="row no-gutters">
+
+      <div class="col-12 col-lg-2 col-xl-4 footlogo" data-block="g_footlogo" data-block-global="yes">  
+        <!-- <img src="skin/picture/俏牌logo.png" alt="logo">       -->
+      </div>
+
+      <div class="col-12 col-lg-5 col-xl-4 order-lg-first mtfoot">
+        <div class="foottel" data-block="g_foottellist" data-block-global="yes">
+          <div class="lxwm d-lg-none">电话：</div>
+          <div class="telphone">
+            <a href="tel:{pboot:companyphone}" title="{pboot:companyphone}">{pboot:companyphone}</a>
+	        </div>
+        </div>
+        <div class="footfox" data-block="g_footfox" data-block-global="yes">传真：{pboot:companyfax}</div>     
+        <div class="footfox mt-lg-0" data-block="g_footadd" data-block-global="yes">   
+          <a href="https://uri.amap.com/marker?position=121.251899,41.324261&amp;name={pboot:companyname}" title="地址" target="_blank">地址：{pboot:companyaddress}</a>     
+        </div>
+      </div>
+
+      <!-- 尾部栏目列表 -->
+      <div class="col-12 col-lg-5 col-xl-4 footdaohang ml-auto d-none d-lg-block">
+
+        <div class="footnav"><a href="/" title="网站首页">网站首页</a></div>
+        
+        {pboot:sort scode=1}
+        <div class="footnav"><a href="[sort:link]" title="[sort:name]">[sort:name]</a></div>
+        {/pboot:sort}
+
+        {pboot:sort scode=5}
+        <div class="footnav"><a href="[sort:link]" title="[sort:name]">[sort:name]</a></div>
+        {/pboot:sort}
+
+        {pboot:sort scode=2}
+        <div class="footnav"><a href="[sort:link]" title="[sort:name]">[sort:name]</a></div>
+        {/pboot:sort}
+
+        {pboot:sort scode=9}
+        <div class="footnav"><a href="[sort:link]" title="[sort:name]">[sort:name]</a></div>
+        {/pboot:sort}
+
+        {pboot:sort scode=11}
+        <div class="footnav"><a href="[sort:link]" title="[sort:name]">[sort:name]</a></div>
+        {/pboot:sort}
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid headicp">
+  <div class="container p-0">
+    <div class="row no-gutters">
+      <div class="col-12 col-lg-auto footicp ml-lg-auto"><a href="https://beian.miit.gov.cn/" title="ICP" target="_blank">{pboot:siteicp}</a></div>
+      
+      <!-- 公安备案号 手动改得了 -->
+      <div class="col-12 col-lg-auto footicp d-none d-lg-block mr-lg-auto"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=210727027051" title="{pboot:companyname}" target="_blank" style="display: flex;align-items: center;"><img src="skin/picture/icp.png" alt="{pboot:companyname}" style="display: block;width: .2rem;margin-right: .05rem;">辽公网安备222222222号</a></div>
+      
+      <div class="w-100"></div>
+      <div class="col-12 col-lg-auto footicp ml-lg-auto">版权所有：{pboot:companyname}</div>
+      <div class="col-12 col-lg-auto footicp mr-lg-auto">技术支持：{pboot:companyname}</div>
+    </div>
+  </div>
+</div>

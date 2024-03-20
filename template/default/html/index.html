@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>{pboot:pagetitle}</title>
+  <meta name="keywords" content="{pboot:pagekeywords}" />
+  <meta name="description" content="{pboot:pagedescription}" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="format-detection" content="telephone=no">
+	<meta name="baidu-site-verification" content="JKu7aH3m9M" />
+  <link href="{pboot:sitepath}/skin/css/bootstrap.css" media="all" rel="stylesheet" />
+  <link href="{pboot:sitepath}/skin/css/swiper.css" media="all" rel="stylesheet" />
+  <link href="{pboot:sitepath}/skin/css/style.css" media="all" rel="stylesheet" />
+  <link href="{pboot:sitepath}/skin/css/pictureviewer.css" media="all" rel="stylesheet" />
+  <link href="{pboot:sitepath}/skin/css/video-js.css" media="all" rel="stylesheet" />
+  <link href="{pboot:sitepath}/skin/css/d2e37f1ceba34ed9beb04943ca4b640b.css" media="all" rel="stylesheet" />
+  <script src="{pboot:sitepath}/skin/js/jquery-1.9.1.min.js"></script>
+  <script src="{pboot:sitepath}/skin/js/bootstrap.js"></script>
+  <script src="{pboot:sitepath}/skin/js/swiper.min.js"></script>
+  <script src="{pboot:sitepath}/skin/js/rem.js"></script>
+	<script src="{pboot:sitepath}/skin/js/videojs-ie8.min.js"></script>
+	<script src="{pboot:sitepath}/skin/js/video.js"></script>
+	<script src="{pboot:sitepath}/skin/js/jquery.mousewheel.min.js"></script>
+	<script src="{pboot:sitepath}/skin/js/pictureviewer.js"></script>
+  <script type="text/javascript" src="{pboot:sitepath}/skin/js/swfobject.js"></script>
+</head>
+
+
+
+<body>
+  <script> 
+     !function () {
+      var lang = navigator.language||navigator.userLanguage;
+      lang = lang.substr(0, 2);
+      if(lang == 'en'){
+        window.location.href="/en-US/index.html" 
+      }
+    }()
+  </script>
+
+<!-- 右侧浮动组件 -->
+<!-- <div class="flomin d-lg-none iconfont d-flex">
+  <div class="contf" data-block="g_foottbscmin" data-block-global="yes">   <a href="https://shop116611067.taobao.com/" title="淘宝商城" target="_blank"><span>&#xe628;</span>淘宝商城</a>     
+</div>
+  <div class="contf" data-block="g_footzxzxmin" data-block-global="yes"><a href="tel:0086-416-2427960" title="联系电话"><span>&#xe6cc;</span>联系电话</a>    
+</div>
+</div>
+<div class="floar d-none d-lg-block">
+  <div class="rightqq" data-block="g_rightqq" data-block-global="yes">    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1119259462&amp;site=qq&amp;menu=yes" title="在线客服" target="_blank">
+    <div class="iconfont rightico">&#xe60c;</div>
+    <div class="qq">在线客服</div>
+    </a>     
+ </div>
+  <div class="rightqq" data-block="g_rightshop" data-block-global="yes">    <a href="https://shop116611067.taobao.com/" title="淘宝商城" target="_blank">
+    <div class="iconfont rightico">&#xe620;</div>
+    <div class="qq">淘宝商城</div>
+    </a>     
+ </div>
+  <div class="rightqq" data-block="g_righttel" data-block-global="yes">   <a title="联系电话">
+    <div class="iconfont rightico">&#xe617;</div>
+    <div class="qq">联系电话</div>
+    <div class="rightel">0416-2427960</div>
+    </a>      
+ </div>
+  <div class="rightqq" data-block="g_rightcode" data-block-global="yes">    <a title="关注公众号
+了解更多资讯">
+    <div class="iconfont rightico">&#xe601;</div>
+    <div class="qq">公众号</div>
+    <div class="rightel rightcode"> <img src="skin/picture/wex.jpg" alt="公众号">
+      <div class="codetext">关注公众号<br/>了解更多资讯</div>
+    </div>
+    </a>     
+ </div>
+  <div class="rightqq back">
+    <div class="iconfont rightico">&#xe610;</div>
+    <div class="qq">TOP</div>
+  </div>
+</div> -->
+
+<!-- 顶部引进来 -->
+{include file=common/head.html}
+
+
+
+<!-- 这段不是我注释的 -->
+<!--<style>
+.duil {display:none;}
+@media (min-width: 992px) {
+.duil {position:fixed;top:25%;z-index:99999;width:4%;display:block;}
+.duill {left:.3rem;}
+.duilr {right:.8rem;}
+.duil img {display:block;width:100%}
+.duil img:nth-child(2) {width:40%;margin: 0.1rem auto;cursor:pointer;}
+}
+</style>
+<div class="duil duill" id="duil"><img src="skin/picture/duilianl.jpg" /><img src="skin/picture/dlc.png" id="dropdown" /></div>
+<div class="duil duilr" id="duil1"><img src="skin/picture/duilianr.jpg" /><img src="skin/picture/dlc.png" id="dropdown1" /></div>
+<script>
+    window.onload = function () {
+        /* window意思是窗口     onload是加载     意思是页面加载完毕后，才执行里面的js ，所以可以放在顶端*/
+        var img = document.getElementById("duil");
+        var img1 = document.getElementById("duil1");
+        /*获取图片img="id"给变量 img*/
+        var btn_hidden = document.getElementById("dropdown");
+        var btn_hidden1 = document.getElementById("dropdown1");
+        /*获取隐藏按钮id=“btn_show”给变量 btn_hidden */
+        /*点击显示按钮时，img的样式style的display属性赋值为“block”，下同理*/
+        btn_hidden.onclick = function () {
+            img.style.display = "none";
+        }
+        btn_hidden1.onclick = function () {
+            img1.style.display = "none";
+        }
+    }
+</script>-->
+
+<!-- 产品横向列出来 -->
+<div class="container-fluid head1">
+  <div class="container p-0">
+    <br class="row no-gutters">
+      <div class="col-12 proch" data-block="g_protitlech" data-block-global="yes">测试大标题</div>
+      <div class="proline"></div>
+      <div class="col-12 prodes" data-block="g_prodes" data-block-global="yes">测试小标题</div>
+      <p class="jline" style="text-align:center;">
+        <br />
+      </p>
+
+      <!-- 横向三个 -->
+      <div class="col-12 prolist">
+        <div class="row no-gutters">
+
+          {pboot:content id=12}
+          <div class="col-6 col-lg-4 product" data-block="g_product1" data-block-global="yes">   
+            <a href="[content:link]" title="[content:title]"> 
+	            <div class="propicp"><img src="[content:ico]" alt="[content:title]"></div>
+              <div class="producttitle">[content:title]</div>
+              <div class="productdes">[content:content]</div>
+              <div class="productmore">
+                <div class="productmorew">更多</div>
+                <div class="productmorei iconfont">&#xe600;</div>
+              </div>
+            </a>      
+          </div>
+          {/pboot:content}
+
+          {pboot:content id=13}
+          <div class="col-6 col-lg-4 product" data-block="g_product1" data-block-global="yes">   
+            <a href="[content:link]" title="[content:title]"> 
+	            <div class="propicp"><img src="[content:ico]" alt="[content:title]"></div>
+              <div class="producttitle">[content:title]</div>
+              <div class="productdes">[content:content]</div>
+              <div class="productmore">
+                <div class="productmorew">更多</div>
+                <div class="productmorei iconfont">&#xe600;</div>
+              </div>
+            </a>      
+          </div>
+          {/pboot:content}
+
+          {pboot:content id=42}
+          <div class="col-6 col-lg-4 product" data-block="g_product1" data-block-global="yes">   
+            <a href="[content:link]" title="[content:title]"> 
+	            <div class="propicp"><img src="[content:ico]" alt="[content:title]"></div>
+              <div class="producttitle">[content:title]</div>
+              <div class="productdes">[content:content]</div>
+              <div class="productmore">
+                <div class="productmorew">更多</div>
+                <div class="productmorei iconfont">&#xe600;</div>
+              </div>
+            </a>      
+          </div>
+          {/pboot:content}
+
+        </div>
+      </div>
+
+      <!-- 四方格四个 -->
+      <!-- <div class="col-12 protwolist">
+        <div class="row no-gutters">
+          
+          <div class="col-6 protwo" data-block="g_productw1" data-block-global="yes">     
+            <a href="/cpzx/hmrwnf.html" title="火麻仁微囊粉">
+              <div class="protwotit d-lg-none">火麻仁微囊粉</div>
+              <div class="protwotext"> <img src="skin/picture/220924002.png" alt="火麻仁微囊粉">
+                <div class="protworight">
+                  <div class="protwotit d-none d-lg-block">火麻仁微囊粉</div>
+                  <div class="protwordes">以多种植物籽仁，如火麻仁、南瓜仁、亚麻仁、西瓜仁和紫苏籽仁等，以及抗性糊精等辅料为原料，经冲洗、胶体磨、高压均质、包埋（微囊化）和喷雾干燥等工艺加工而成的全脂火麻仁粉（南瓜仁粉、亚麻仁粉、西瓜仁粉和紫苏籽仁粉等）。</div>
+                  <div class="protwormore">更多</div>
+                </div>
+              </div>
+            </a>    
+          </div>
+          
+          <div class="col-6 protwo" data-block="g_productw2" data-block-global="yes">
+            <a href="/cpzx/csmsp.html" title="长寿麻火麻小包装产品">
+              <div class="protwotit d-lg-none">长寿麻火麻小包装产品</div>
+              <div class="protwotext">
+                <img src="skin/picture/bbbbb637258278056625495.png" alt="长寿麻火麻小包装产品">
+                <div class="protworight">
+                  <div class="protwotit d-none d-lg-block">长寿麻火麻小包装产品</div>
+                  <div class="protwordes">主要产品有精选火麻籽、火麻仁、火麻仁油、火麻仁蛋白粉、火麻分离蛋白、火麻肽等。</div>
+                  <div class="protwormore">更多</div>
+                </div>
+              </div>
+            </a>    
+          </div>
+          
+          <div class="col-6 protwo protwonew"> 
+            <div class="protwotit d-lg-none">其他蛋白粉</div>
+            <div class="protwotext">
+              <div class="protwopic" data-block="g_duopicnew" data-block-global="yes">
+                <a href="/cpzx/khdbf.html" title=""><img src="skin/picture/220823010.png" alt=""></a>
+                <a href="/cpzx/ngdbf.html" title=""><img src="skin/picture/220823011.png" alt=""></a>
+                <a href="/cpzx/xgrdbf.html" title=""><img src="skin/picture/220823012.jpg" alt=""></a>
+                <a href="/cpzx/ymrdbf.html" title=""><img src="skin/picture/220823013.jpg" alt=""></a>
+              </div>
+              <div class="protworight" data-block="g_duopronew" data-block-global="yes">
+                <div class="protwotit d-none d-lg-block">其他蛋白粉</div>
+                <div class="protwordes">优质的植物基蛋白源。</div>
+                <a href="/cpzx/khdbf.html" title="其他蛋白粉"><div class="protwormore">更多</div></a>      
+              </div>
+            </div>
+          </div>
+         
+          <div class="col-6 protwo" data-block="g_productw4" data-block-global="yes">
+            <a href="/cpzx/lzyl.html" title="其他油类">
+              <div class="protwotit d-lg-none">其他油类</div>
+              <div class="protwotext">
+                <img src="skin/picture/2208230001.png" alt="其他油类">
+                <div class="protworight">
+                  <div class="protwotit d-none d-lg-block">其他油类</div>
+                  <div class="protwordes">其他类型植物油。</div>
+                  <div class="protwormore">更多</div>
+                </div>
+              </div>
+            </a>    
+          </div>
+
+        </div>
+      </div> -->
+
+
+    </div>
+  </div>
+</div>
+
+<!-- 关于我们 -->
+<div class="container-fluid head2">
+  <div class="container p-0">
+    <div class="row no-gutters">
+
+      <div class="col-12 aboutch order-lg-0" data-block="g_abouttitlech" data-block-global="yes">
+        <a href="/?jieshao/" title="关于俏牌">关于我们</a>
+      </div>
+
+      <div class="col-12 aboutdes order-lg-3" data-block="g_prodes" data-block-global="yes">关于我们</div>
+      <div class="aboutline order-lg-2"></div>
+
+      <!-- 三行介绍 -->
+      <div class="col-12 aboutdesm order-lg-4 d-none d-lg-block" data-block="g_about" data-block-global="yes">
+        第一行<br/>
+        第二行<br/>
+        第三行
+      </div>
+      <div class="col-10 number ml-auto mr-auto order-lg-last" data-block="g_numberlist" data-block-global="yes">
+
+        <!-- 底下的横向列表 -->
+        <div class="row no-gutters">
+
+          <div class="col-3 num">
+            <div class="tubiaoshu">
+              <span class="count-title counter">2024</span>
+              <p class="span">年</p>
+            </div>
+            <div class="tubiaozi">我们创立于</div>
+          </div>
+
+          <div class="col-3 num">
+            <div class="tubiaoshu">
+              <span class="count-title counter">120</span>
+              <p class="span">亩</p>
+            </div>
+            <div class="tubiaozi">总占地面积</div>
+          </div>
+
+          <div class="col-3 num">
+            <div class="tubiaoshu"><span class="count-title counter">100000</span>
+              <p class="span">级</p>
+            </div>
+            <div class="tubiaozi">净化车间</div>
+          </div>
+
+          <div class="col-3 num">
+            <div class="tubiaoshu">
+              <span class="count-title counter">500</span>
+              <p class="span">+</p>
+            </div>
+            <div class="tubiaozi">合作企业</div>
+          </div>
+
+          <!-- 动态显示 -->
+          <script type="text/javascript" src="skin/js/jquery.waypoints.min.js"></script>
+          <script type="text/javascript" src="skin/js/jquery.countup.min.js"></script>
+          <script type="text/javascript">
+            $('.counter').countUp({
+              delay: 70,
+              time: 7000
+            });
+          </script>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 新闻中心 -->
+<div class="container-fluid head3">
+  <div class="container p-0">
+    <div class="row no-gutters">
+      
+      <div class="col-12 col-lg-6">
+        <div class="newstitle">
+          <div class="newsch" data-block="g_newstitlech" data-block-global="yes">新闻中心</div>
+        </div>
+        <div class="newsdes" data-block="g_prodes" data-block-global="yes">新闻中心</div>
+        <div class="newsline"></div>
+      </div>
+      
+      <div class="col-12 newslist order-lg-last" data-block="gl_newslist" data-block-global="yes">
+        <div class="row no-gutters">
+
+          {pboot:list scode=2 num=3 order=date}
+          <div class="col-12 col-lg-4 news">
+            <a href="[list:link]" title="[list:title]">
+              <div class="newsdate">
+                <div class="newsd">[list:date style=m-d]</div>
+                <div class="newsyear">[list:date style=Y]</div>
+              </div>
+              <div class="newsright">
+                <div class="newst">[list:title]</div>
+                <div class="newsde">[list:content]</div>
+              </div>
+            </a>
+          </div>
+          {/pboot:list}
+          
+        </div>
+
+      </div>
+
+
+      <div class="col-auto newsmore iconfont" data-block="g_newsmore" data-block-global="yes">    
+        <a href="/?article/" title="READ MORE">更多<span>&#xe600;</span></a>     
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 尾部引进来 -->
+{include file=common/foot.html}
+
+
+<!-- 底下是js逻辑 -->
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+<script>
+	$(function () {
+    // 返回顶部
+    $(".back").click(function () {$("html,body").animate({'scrollTop': '0px'}, 300)});
+  });
+</script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+      delay: 2500,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  //鼠标覆盖停止自动切换
+  swiper.el.onmouseover = function(){
+    swiper.autoplay.stop();
+  }
+  //鼠标离开开始自动切换
+  swiper.el.onmouseout = function(){
+    swiper.autoplay.start();
+  }
+</script>
+<script>
+  (function () {
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+      handleFontSize();
+    } else {
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+      }
+    }
+
+    function handleFontSize() {
+      // 设置网页字体为默认大小
+      WeixinJSBridge.invoke('setFontSizeCallback', {
+        'fontSize': 0
+      });
+      // 重写设置网页字体大小的事件
+      WeixinJSBridge.on('menu:setfont', function () {
+        WeixinJSBridge.invoke('setFontSizeCallback', {
+          'fontSize': 0
+        });
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

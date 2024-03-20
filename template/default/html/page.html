@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>{pboot:pagetitle}</title>
+  <meta name="keywords" content="{pboot:pagekeywords}" />
+  <meta name="description" content="{pboot:pagedescription}" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="format-detection" content="telephone=no">
+	<meta name="baidu-site-verification" content="JKu7aH3m9M" />
+  <link href="skin/css/bootstrap.css" media="all" rel="stylesheet" />
+  <link href="skin/css/swiper.css" media="all" rel="stylesheet" />
+  <link href="skin/css/style.css" media="all" rel="stylesheet" />
+  <link href="skin/css/pictureviewer.css" media="all" rel="stylesheet" />
+  <link href="skin/css/video-js.css" media="all" rel="stylesheet" />
+  <link href="skin/css/d2e37f1ceba34ed9beb04943ca4b640b.css" media="all" rel="stylesheet" />
+  <script src="skin/js/jquery-1.9.1.min.js"></script>
+  <script src="skin/js/bootstrap.js"></script>
+  <script src="skin/js/swiper.min.js"></script>
+  <script src="skin/js/rem.js"></script>
+	<script src="skin/js/videojs-ie8.min.js"></script>
+	<script src="skin/js/video.js"></script>
+	<script src="skin/js/jquery.mousewheel.min.js"></script>
+	<script src="skin/js/pictureviewer.js"></script>
+  <script type="text/javascript" src="skin/js/swfobject.js"></script>
+  
+</head>
+
+<body>
+<script> 
+  !function () {
+    var lang = navigator.language||navigator.userLanguage;
+    lang = lang.substr(0, 2);
+    if(lang == 'en'){
+      window.location.href="/en-US/index.html" 
+    }
+  }()
+</script>
+
+<!--手机端底部浮动-->
+<!-- <div class="flomin d-lg-none iconfont d-flex">
+  <div class="contf" data-block="g_foottbscmin" data-block-global="yes">   
+    <a href="https://shop116611067.taobao.com/" title="淘宝商城" target="_blank"><span>&#xe628;</span>淘宝商城</a>     
+  </div>
+  <div class="contf" data-block="g_footzxzxmin" data-block-global="yes">
+    <a href="tel:0086-416-2427960" title="联系电话"><span>&#xe6cc;</span>联系电话</a>    
+  </div>
+</div>
+<div class="floar d-none d-lg-block">
+  <div class="rightqq" data-block="g_rightqq" data-block-global="yes">    
+    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1119259462&amp;site=qq&amp;menu=yes" title="在线客服" target="_blank">
+      <div class="iconfont rightico">&#xe60c;</div>
+      <div class="qq">在线客服</div>
+    </a>     
+  </div>
+  <div class="rightqq" data-block="g_rightshop" data-block-global="yes">    
+    <a href="https://shop116611067.taobao.com/" title="淘宝商城" target="_blank">
+      <div class="iconfont rightico">&#xe620;</div>
+      <div class="qq">淘宝商城</div>
+    </a>     
+ </div>
+  <div class="rightqq" data-block="g_righttel" data-block-global="yes">   <a title="联系电话">
+    <div class="iconfont rightico">&#xe617;</div>
+    <div class="qq">联系电话</div>
+    <div class="rightel">0416-2427960</div>
+    </a>      
+ </div>
+  <div class="rightqq" data-block="g_rightcode" data-block-global="yes">    <a title="关注公众号
+了解更多资讯">
+    <div class="iconfont rightico">&#xe601;</div>
+    <div class="qq">公众号</div>
+    <div class="rightel rightcode"> <img src="skin/picture/wex.jpg" alt="公众号">
+      <div class="codetext">关注公众号<br/>了解更多资讯</div>
+    </div>
+    </a>     
+ </div>
+  <div class="rightqq back">
+    <div class="iconfont rightico">&#xe610;</div>
+    <div class="qq">TOP</div>
+  </div>
+</div> -->
+
+<!-- 顶部引进来 -->
+{include file=common/head.html}
+
+<div class="container-fluid nytext nymin">
+  <div class="container p-0">
+    <div class="row no-gutters">
+
+      <!-- 左侧的框框 -->
+      <div class="col-lg-2 d-none d-lg-block p-0">
+        <div class="nynavone">{sort:topname}</div>
+        <div class="nynavtwo">
+
+          {pboot:nav num=50 parent={sort:tcode}}
+          <a href="[nav:link]" title="[nav:name]" {pboot:if('[nav:scode]'=='{sort:scode}')}class="active">[nav:name]</a>
+          {/pboot:nav}
+          <!-- <a href="/ppgs/zzzs.html" title="资质证书" >资质证书</a> -->
+        </div>
+      </div>
+      
+
+      <!-- 右侧主体 -->
+      <div class="col-12 col-lg-10 pad">
+
+        <!-- 主题的上部小标题 -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+            <li class="breadcrumb-item"><a title="{sort:topname}">{sort:topname}</a></li>
+            <li class="breadcrumb-item active"><a href="{sort:link}" title="{sort:name}"></a>{sort:name}</li>
+          </ol>
+        </nav>
+
+        <!-- 主体标题 -->
+        <div class="ntcont">{sort:name}</div>
+        <div class="ntconten"></div>
+
+        <!-- 主题内容 -->
+        <div class="nytextxq">
+
+          <!-- 空行 -->
+          <p class="jline" style="text-align:center;">
+            <br />
+          </p>
+
+          <!-- 空行以后的内容 -->
+          {content:content}
+
+        </div>
+
+      </div>
+	  </div>
+  </div>
+</div>
+
+<!-- 底部引进来 -->
+{include file=common/foot.html}
+
+
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+<script>
+	$(function () {
+            // 返回顶部
+            $(".back").click(function () {
+                $("html,body").animate({
+                    'scrollTop': '0px'
+                }, 300)
+            });
+        });
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    //鼠标覆盖停止自动切换
+    swiper.el.onmouseover = function(){
+      swiper.autoplay.stop();
+    }
+
+    //鼠标离开开始自动切换
+    swiper.el.onmouseout = function(){
+      swiper.autoplay.start();
+    }
+</script>
+<script>
+  (function () {
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+      handleFontSize();
+    } else {
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+      }
+    }
+
+    function handleFontSize() {
+      // 设置网页字体为默认大小
+      WeixinJSBridge.invoke('setFontSizeCallback', {
+        'fontSize': 0
+      });
+      // 重写设置网页字体大小的事件
+      WeixinJSBridge.on('menu:setfont', function () {
+        WeixinJSBridge.invoke('setFontSizeCallback', {
+          'fontSize': 0
+        });
+      });
+    }
+  })();
+</script>
+
+
+</body>
+</html>

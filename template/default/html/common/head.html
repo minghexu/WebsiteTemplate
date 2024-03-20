@@ -1,0 +1,106 @@
+<!-- 头部 -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container p-0 position-relative">
+
+      <a class="navbar-brand" href="/" title="{pboot:sitetitle}" data-block="g_logo" data-block-global="yes">
+        <img src="{pboot:sitelogo}" alt="{pboot:sitetitle}">
+      </a>
+
+      <!-- 中英文切换 -->
+      <!-- <div class="lang">
+        <a href="/index.html" title="中文简体" target="_blank">中文</a>
+        <span>/</span>
+        <a href="/en-US/index.html" title="英文" target="_blank">EN</a> 
+      </div> -->
+
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon iconfont"></span> </button>
+      
+      <!-- 六个导航栏 -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto justify-content-start align-items-center d-none d-lg-flex">
+          <style>
+            .nav-item:nth-child(4) .dropdown-menu {
+              width: 120%;
+              left: -0.1rem;
+            }
+          </style>
+
+          <!-- 网站首页导航栏 -->
+          <li class="nav-item "> 
+            <a class="nav-link" href="/" title="网站首页">网站首页</a>
+          </li>
+
+          <!-- 其余的导航栏 -->
+          <!-- 一级嵌套 -->
+          {pboot:nav num=10 parent=0}
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="[nav:link]" title="[nav:name]" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"> [nav:name] </a>
+            
+            <!-- 二级嵌套 -->
+            {pboot:if([nav:soncount]>0)}
+            <div class="dropdown-menu align-items-center" aria-labelledby="navbarDropdown">  
+                {pboot:2nav num=10 parent=[nav:scode]}
+                <a class="dropdown-item" href="[2nav:link]" title="[2nav:name]">[2nav:name]</a> 
+                {/pboot:2nav}
+            </div>
+            {/pboot:if}
+
+          </li>
+          {/pboot:nav}
+
+        </ul>
+  
+
+        
+        <!--手机端导航-->
+        <ul class="navbar-nav justify-content-start  align-items-center d-lg-none">
+          <li class="nav-item"> <a class="nav-link" href="/index.html" title="网站首页">网站首页</a> </li>
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 关于俏牌 </a>
+            <div class="dropdown-menu align-items-center" aria-labelledby="navbarDropdown">  
+              <a class="dropdown-item" href="/ppgs/gywm.html" title="关于我们">关于我们</a> 
+              <a class="dropdown-item" href="/ppgs/zzzs.html" title="资质证书">资质证书</a> 
+                  </div>
+          </li>
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 产品中心 </a>
+            <div class="dropdown-menu align-items-center" aria-labelledby="navbarDropdown">  
+              <a class="dropdown-item" href="/cpzx/hmz.html" title="火麻籽">火麻籽</a> 
+              <a class="dropdown-item" href="/cpzx/hmr.html" title="火麻仁">火麻仁</a> 
+              <a class="dropdown-item" href="/cpzx/hmdbf.html" title="火麻蛋白粉">火麻蛋白粉</a> 
+              <a class="dropdown-item" href="/cpzx/hmrwnf.html" title="火麻仁微囊粉">火麻仁微囊粉</a> 
+              <a class="dropdown-item" href="/cpzx/hmry.html" title="火麻油">火麻油</a> 
+              <a class="dropdown-item" href="/cpzx/hmyf.html" title="火麻油微囊粉">火麻油微囊粉</a> 
+              <a class="dropdown-item" href="/cpzx/csmsp.html" title="长寿麻食品">长寿麻食品</a> 
+              <a class="dropdown-item" href="/cpzx/khdbf.html" title="葵花蛋白粉">葵花蛋白粉</a> 
+              <a class="dropdown-item" href="/cpzx/ngdbf.html" title="南瓜蛋白粉">南瓜蛋白粉</a> 
+              <a class="dropdown-item" href="/cpzx/xgrdbf.html" title="西瓜仁蛋白粉">西瓜仁蛋白粉</a> 
+              <a class="dropdown-item" href="/cpzx/ymrdbf.html" title="亚麻仁蛋白粉">亚麻仁蛋白粉</a> 
+              <a class="dropdown-item" href="/cpzx/lzyl.html" title="其他油类">其他油类</a> 
+                  </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 新闻资讯 </a>
+            <div class="dropdown-menu align-items-center" aria-labelledby="navbarDropdown">  
+              <a class="dropdown-item" href="/xwzx/hyxw.html" title="行业新闻">行业新闻</a> 
+              <a class="dropdown-item" href="/xwzx/gsxw.html" title="公司新闻">公司新闻</a> 
+            </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="/zpxx.html" title="招聘信息">招聘信息</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/lxwm.html" title="联系我们">联系我们</a> </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+  
+<!-- swiper -->
+<div class="swiper-container" data-block="g_banner" data-block-global="yes">
+  <div class="swiper-wrapper">
+    {pboot:slide num=3 gid=1}
+    <div class="swiper-slide" style="background-image: url([slide:src])"></div>
+    {/pboot:slide}
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next bannernext iconfont">&#xe658;</div>
+  <div class="swiper-button-prev bannerprev iconfont">&#xe650;</div>
+</div>

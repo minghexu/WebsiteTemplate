@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>在多字节的目标代码页中，没有此 Unicode 字符可以映射到的字符。 (异常来自 HRESULT:0x80070459)</title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>在多字节的目标代码页中，没有此 Unicode 字符可以映射到的字符。 (异常来自 HRESULT:0x80070459)</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。
+
+            <br><br>
+
+            <b> 异常详细信息: </b>System.ArgumentOutOfRangeException: 在多字节的目标代码页中，没有此 Unicode 字符可以映射到的字符。 (异常来自 HRESULT:0x80070459)<br><br>
+
+            <b>源错误:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>堆栈跟踪:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[ArgumentOutOfRangeException: 在多字节的目标代码页中，没有此 Unicode 字符可以映射到的字符。 (异常来自 HRESULT:0x80070459)]
+   System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo) +0
+   System.Runtime.InteropServices.Marshal.ThrowExceptionForHR(Int32 errorCode) +10590466
+   System.Web.Hosting.IIS7WorkerRequest.GetServerVariableInternal(String name) +40
+   System.Web.Hosting.IIS7WorkerRequest.GetServerVariable(String name) +36
+   System.Web.Hosting.IIS7WorkerRequest.ReadRequestHeaders() +119
+   System.Web.Hosting.IIS7WorkerRequest.GetKnownRequestHeader(Int32 index) +69
+   System.Web.HttpRequest.get_ContentType() +31
+   System.Web.HttpRequestWrapper.get_ContentType() +9
+   System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext) +36
+   System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext) +19
+   System.Web.Mvc.&lt;&gt;c__DisplayClassc.&lt;GetValueProvider&gt;b__7(ValueProviderFactory factory) +34
+   System.Linq.WhereSelectEnumerableIterator`2.MoveNext() +145
+   System.Linq.WhereSelectEnumerableIterator`2.MoveNext() +171
+   System.Collections.Generic.List`1..ctor(IEnumerable`1 collection) +460
+   System.Linq.Enumerable.ToList(IEnumerable`1 source) +58
+   System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext) +281
+   System.Web.Mvc.ControllerBase.get_ValueProvider() +40
+   System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor) +60
+   System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor) +117
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass25.&lt;BeginInvokeAction&gt;b__1e(AsyncCallback asyncCallback, Object asyncState) +446
+   System.Web.Mvc.Async.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout) +130
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeAction(ControllerContext controllerContext, String actionName, AsyncCallback callback, Object state) +302
+   System.Web.Mvc.&lt;&gt;c__DisplayClass1d.&lt;BeginExecuteCore&gt;b__17(AsyncCallback asyncCallback, Object asyncState) +30
+   System.Web.Mvc.Async.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout) +130
+   System.Web.Mvc.Controller.BeginExecuteCore(AsyncCallback callback, Object state) +382
+   System.Web.Mvc.Async.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout) +130
+   System.Web.Mvc.Controller.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state) +317
+   System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state) +15
+   System.Web.Mvc.&lt;&gt;c__DisplayClass8.&lt;BeginProcessRequest&gt;b__2(AsyncCallback asyncCallback, Object asyncState) +71
+   System.Web.Mvc.Async.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout) +130
+   System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state) +249
+   System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state) +50
+   System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData) +16
+   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +301
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.34280
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[ArgumentOutOfRangeException]: 在多字节的目标代码页中，没有此 Unicode 字符可以映射到的字符。 (异常来自 HRESULT:0x80070459)
+   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHR(Int32 errorCode)
+   在 System.Web.Hosting.IIS7WorkerRequest.GetServerVariableInternal(String name)
+   在 System.Web.Hosting.IIS7WorkerRequest.GetServerVariable(String name)
+   在 System.Web.Hosting.IIS7WorkerRequest.ReadRequestHeaders()
+   在 System.Web.Hosting.IIS7WorkerRequest.GetKnownRequestHeader(Int32 index)
+   在 System.Web.HttpRequest.get_ContentType()
+   在 System.Web.HttpRequestWrapper.get_ContentType()
+   在 System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   在 System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   在 System.Web.Mvc.ValueProviderFactoryCollection.<>c__DisplayClassc.<GetValueProvider>b__7(ValueProviderFactory factory)
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   在 System.Web.Mvc.ControllerBase.get_ValueProvider()
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__1e(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeAction(ControllerContext controllerContext, String actionName, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Controller.<>c__DisplayClass1d.<BeginExecuteCore>b__17(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Controller.BeginExecuteCore(AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Controller.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.<>c__DisplayClass8.<BeginProcessRequest>b__2(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--><!-- 
+此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->
